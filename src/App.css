@@ -1,0 +1,48 @@
+/*###################### GENERAL ######################*/
+
+@font-face {
+  font-family: 'Josefin Regular';
+  src: url("assets/fonts/JosefinSans-Regular.woff")format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Josefin Bold';
+  src: url("assets/fonts/JosefinSans-Bold.woff") format('woff');
+  font-style: bold;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/*###################### HEADER ######################*/
+
+header {
+  width: 375px;
+  height: 200px;
+  background: url(assets/images/bg-mobile-light.jpg) center/375px no-repeat;
+  border: solid 1px red;
+}
+
+#title {
+  width: 325px;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 48px auto 0px;
+  color: white;
+  border: solid 1px red;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0%;
+  font: 700 25px/0px 'Josefin Bold';
+  letter-spacing: 10px;
+}
