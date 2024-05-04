@@ -43,6 +43,21 @@ input:focus{
   background-color: white;
 }
 
+.top-todo{
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom: solid 1px #E3E4F1;
+}
+
+.mid-todo{
+  border-bottom: solid 1px #E3E4F1;
+}
+
+.bottom-todo{
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
 .state-bt{
   width: 20px;
   height: 20px;
@@ -141,5 +156,6 @@ main{
   transform: translateX(-50%);
   background-color: white;
   box-shadow: 0px 35px 50px -15px hsla(237,19.6%,80%,0.5);
+  border-radius: 5px;
 }
 
