@@ -33,7 +33,11 @@ function App() {
               <button className="clear-bt">Clear Completed</button>
             </div>
           </section>
-          <menu className='todo single-todo'></menu>
+          <menu className='todo single-todo'>
+            <button className='bt-select'>All</button>
+            <button className='bt-select'>Active</button>
+            <button className='bt-select'>Completed</button>
+          </menu>
         </div>
 
 
