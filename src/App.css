@@ -59,13 +59,24 @@ input:focus{
   border: solid 1px #979797;
 }
 
-.todoUnCompletedText{
+.delete-bt{
+  width: 12px;
+  height: 12px;
+  background: url("assets/images/icon-cross.svg") center/12px no-repeat;
+  border:none;
+}
+
+.todoText{
+  width: 230px;
   font: 400 12px/0px 'Josefin Regular';
+  margin: 0px 13px 0px 0px;
+}
+
+.unCompleted{
   color:#494C6B;
 }
 
-.todoCompletedText{
-  font: 400 12px/0px 'Josefin Regular';
+.completed{
   text-decoration: line-through;
   color:#D1D2DA;
 }

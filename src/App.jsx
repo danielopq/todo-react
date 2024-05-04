@@ -19,7 +19,8 @@ function App() {
         <section id="todoList">
           <article id="tarea01" className="todo">
           <button className='state-bt finishedTodo'></button>
-          <p className='todoCompletedText'>Complete online JavaScript course</p>
+          <p className='todoText completed'>Complete online JavaScript course</p>
+          <button className='delete-bt'></button>
           </article>
         </section>
       </main>
