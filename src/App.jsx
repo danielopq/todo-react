@@ -38,11 +38,9 @@ function App() {
             <button className='bt-select'>Active</button>
             <button className='bt-select'>Completed</button>
           </menu>
+          <p className='bottom-text'>Drag and drop to reorder list</p>
         </div>
-
-
       </main>
-
     </>
   )
 }

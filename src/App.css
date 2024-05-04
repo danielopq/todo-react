@@ -82,7 +82,12 @@ input:focus {
   text-decoration: line-through;
   color: #D1D2DA;
 }
-
+.bottom-text{
+  font: 400 14px/0px 'Josefin Regular';
+  color:#9495A5;
+  text-align: center;
+  margin-top: 40px;
+}
 /*------------ BUTTONS ------------*/
 
 button:hover {
