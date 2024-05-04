@@ -51,10 +51,24 @@ input:focus{
   margin-right: 12px;
 }
 
+.unFinishedTodo{
+  border: solid 1px #979797;
+}
+
 .finishedTodo{
   border: solid 1px #979797;
 }
 
+.todoUnCompletedText{
+  font: 400 12px/0px 'Josefin Regular';
+  color:#494C6B;
+}
+
+.todoCompletedText{
+  font: 400 12px/0px 'Josefin Regular';
+  text-decoration: line-through;
+  color:#D1D2DA;
+}
 /*###################### HEADER ######################*/
 
 header {
@@ -114,4 +128,8 @@ main{
   transform: translateX(-50%);
   background-color: white;
   box-shadow: 0px 35px 50px -15px hsla(237,19.6%,80%,0.5);
+}
+
+#tarea01{
+  border:solid 1px red;
 }

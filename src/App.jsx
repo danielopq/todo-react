@@ -17,7 +17,10 @@ function App() {
       </header>
       <main>
         <section id="todoList">
-          
+          <article id="tarea01" className="todo">
+          <button className='state-bt finishedTodo'></button>
+          <p className='todoCompletedText'>Complete online JavaScript course</p>
+          </article>
         </section>
       </main>
     </>
