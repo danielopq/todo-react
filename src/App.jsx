@@ -15,7 +15,11 @@ function App() {
           </div>
         </form>
       </header>
-      <main></main>
+      <main>
+        <section id="todoList">
+          
+        </section>
+      </main>
     </>
   )
 }
