@@ -20,13 +20,13 @@
 
 /*------------ INPUT ------------*/
 
-input[type="text"]{
+input[type="text"] {
   font: 400 12px/0px 'Josefin Regular';
   color: #494C6B;
   border: none;
 }
 
-input:focus{
+input:focus {
   outline: none;
 }
 
@@ -36,7 +36,7 @@ input:focus{
 
 /*------------ CONTAINERS ------------*/
 
-.todo{
+.todo {
   width: 327px;
   height: 48px;
   display: flex;
@@ -47,45 +47,49 @@ input:focus{
   background-color: white;
 }
 
-.top-todo{
+.top-todo {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom: solid 1px #E3E4F1;
 }
 
-.mid-todo{
+.mid-todo {
   border-bottom: solid 1px #E3E4F1;
 }
 
-.bottom-todo{
+.bottom-todo {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
+.single-todo {
+  border-radius: 5px;
+}
+
 /*------------ TEXT ------------*/
 
-.todoText{
+.todoText {
   width: 230px;
   font: 400 12px/0px 'Josefin Regular';
   margin: 0px 13px 0px 0px;
 }
 
-.unCompleted{
-  color:#494C6B;
+.unCompleted {
+  color: #494C6B;
 }
 
-.completed{
+.completed {
   text-decoration: line-through;
-  color:#D1D2DA;
+  color: #D1D2DA;
 }
 
 /*------------ BUTTONS ------------*/
 
-button:hover{
-  cursor:pointer;
+button:hover {
+  cursor: pointer;
 }
 
-.state-bt{
+.state-bt {
   width: 20px;
   height: 20px;
   background-color: white;
@@ -94,28 +98,29 @@ button:hover{
   outline: none;
 }
 
-.unFinished-bt{
+.unFinished-bt {
   border: solid 1px #979797;
 }
 
-.finished-bt{
+.finished-bt {
   border: none;
-  background: url("assets/images/icon-check.svg") center/8px no-repeat, linear-gradient(-45deg,#C058F3,#55DDFF);
+  background: url("assets/images/icon-check.svg") center/8px no-repeat, linear-gradient(-45deg, #C058F3, #55DDFF);
 }
 
-.delete-bt{
+.delete-bt {
   width: 12px;
   height: 12px;
   background: url("assets/images/icon-cross.svg") center/12px no-repeat;
-  border:none;
+  border: none;
 }
 
-.clear-bt{
+.clear-bt {
   font: 400 12px/0px 'Josefin Regular';
   color: #9495A5;
   background-color: transparent;
   border: none;
 }
+
 /*###################### HEADER ######################*/
 
 header {
@@ -145,43 +150,46 @@ h1 {
   letter-spacing: 10px;
 }
 
-#changeBg-bt{
+#changeBg-bt {
   width: 20px;
   height: 20px;
   background: transparent url(assets/images/icon-moon.svg) center/20px no-repeat;
   border: none;
 }
 
-#newTodo{
+#newTodo {
   margin-top: 40px;
-  border-radius: 5px;
 }
 
 /*###################### MAIN ######################*/
 
-main{
+main {
   width: 100vw;
   height: 100vh;
   background-color: #F2F2F2;
 }
 
-#todoList{
+#main-container {
   width: 327px;
   position: absolute;
   z-index: 1;
-  top:172px;
-  left:50%;
+  top: 172px;
+  left: 50%;
   transform: translateX(-50%);
+}
+
+#todoList {
   background-color: white;
-  box-shadow: 0px 35px 50px -15px hsla(237,19.6%,80%,0.5);
+  box-shadow: 0px 35px 50px -15px hsla(237, 19.6%, 80%, 0.5);
   border-radius: 5px;
 }
 
-#info-bar{
-  margin:0px;
+#info-bar {
+  margin: 0px;
   font: 400 12px/0px 'Josefin Regular';
   color: #9495A5;
   justify-content: space-between;
 }
-
-
+menu {
+  margin: 16px 0px 0px;
+}
