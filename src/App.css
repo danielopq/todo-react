@@ -54,15 +54,16 @@ input:focus{
 .finishedTodo{
   border: solid 1px #979797;
 }
+
 /*###################### HEADER ######################*/
 
 header {
-  width: 375px;
+  width: 100vw;
   height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(assets/images/bg-mobile-light.jpg) center/375px no-repeat;
+  background: url(assets/images/bg-mobile-light.jpg) center/100vw no-repeat;
 }
 
 #title {
@@ -93,4 +94,12 @@ h1 {
 #newTodo{
   margin-top: 40px;
   border-radius: 5px;
+}
+
+/*###################### MAIN ######################*/
+
+main{
+  width: 100vw;
+  height: 100vh;
+  background-color: #F2F2F2;
 }
