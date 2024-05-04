@@ -18,6 +18,8 @@
   box-sizing: border-box;
 }
 
+/*------------ INPUT ------------*/
+
 input[type="text"]{
   font: 400 12px/0px 'Josefin Regular';
   color: #494C6B;
@@ -32,6 +34,8 @@ input:focus{
   color: #9495A5;
 }
 
+/*------------ CONTAINERS ------------*/
+
 .todo{
   width: 327px;
   height: 48px;
@@ -39,7 +43,7 @@ input:focus{
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 20px;
+  padding: 0px 20px 0px 20px;
   background-color: white;
 }
 
@@ -54,8 +58,31 @@ input:focus{
 }
 
 .bottom-todo{
-  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+
+/*------------ TEXT ------------*/
+
+.todoText{
+  width: 230px;
+  font: 400 12px/0px 'Josefin Regular';
+  margin: 0px 13px 0px 0px;
+}
+
+.unCompleted{
+  color:#494C6B;
+}
+
+.completed{
+  text-decoration: line-through;
+  color:#D1D2DA;
+}
+
+/*------------ BUTTONS ------------*/
+
+button:hover{
+  cursor:pointer;
 }
 
 .state-bt{
@@ -83,19 +110,11 @@ input:focus{
   border:none;
 }
 
-.todoText{
-  width: 230px;
+.clear-bt{
   font: 400 12px/0px 'Josefin Regular';
-  margin: 0px 13px 0px 0px;
-}
-
-.unCompleted{
-  color:#494C6B;
-}
-
-.completed{
-  text-decoration: line-through;
-  color:#D1D2DA;
+  color: #9495A5;
+  background-color: transparent;
+  border: none;
 }
 /*###################### HEADER ######################*/
 
@@ -148,7 +167,6 @@ main{
 
 #todoList{
   width: 327px;
-  height: 400px;
   position: absolute;
   z-index: 1;
   top:172px;
@@ -158,4 +176,12 @@ main{
   box-shadow: 0px 35px 50px -15px hsla(237,19.6%,80%,0.5);
   border-radius: 5px;
 }
+
+#info-bar{
+  margin:0px;
+  font: 400 12px/0px 'Josefin Regular';
+  color: #9495A5;
+  justify-content: space-between;
+}
+
 

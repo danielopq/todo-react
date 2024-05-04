@@ -22,12 +22,15 @@ function App() {
             <p className='todoText completed'>Complete online JavaScript course</p>
             <button className='delete-bt'></button>
           </article>
-          <article id="tarea01" className="todo mid-todo">
+          <article id="tarea02" className="todo mid-todo">
             <button className='state-bt unFinished-bt'></button>
             <p className='todoText unCompleted'>Jog around the park 3x</p>
             <button className='delete-bt'></button>
           </article>
-          <article className='todo'></article>
+          <div id="info-bar" className='todo bottom-todo'>
+            <p id="info" name="info">5 items left</p>
+            <button className="clear-bt">Clear Completed</button>
+          </div>
         </section>
       </main>
     </>
