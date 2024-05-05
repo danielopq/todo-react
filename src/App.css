@@ -24,9 +24,6 @@ input[type="text"] {
   font: 400 12px/0px 'Josefin Regular';
   color: #494C6B;
   border: none;
-}
-
-input:focus {
   outline: none;
 }
 
