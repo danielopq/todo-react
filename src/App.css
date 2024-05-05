@@ -36,7 +36,7 @@ input:focus {
 
 /*------------ CONTAINERS ------------*/
 
-.todo {
+.whiteContainer {
   width: 327px;
   height: 48px;
   display: flex;
@@ -47,23 +47,12 @@ input:focus {
   background-color: white;
 }
 
-.top-todo {
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-bottom: solid 1px #E3E4F1;
-}
-
-.mid-todo {
-  border-bottom: solid 1px #E3E4F1;
-}
-
-.bottom-todo {
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.single-todo {
+.single-cont {
   border-radius: 5px;
+}
+
+.task {
+  border-bottom: solid 1px #E3E4F1;
 }
 
 /*------------ TEXT ------------*/
@@ -191,6 +180,7 @@ main {
 }
 
 #todoList {
+  overflow: hidden;
   box-shadow: 0px 35px 50px -15px hsla(237, 19.6%, 80%, 0.5);
   border-radius: 5px;
 }
