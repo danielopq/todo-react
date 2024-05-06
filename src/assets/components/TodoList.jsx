@@ -1,10 +1,14 @@
-import TodoCompleted from "./TodoCompleted";
+import TodoItem from "./TodoItem";
 
 const TodoList = () => {
     return (
-        <section id="todoList">
-            <TodoCompleted/>
-        </section>
+        <div id="todoList">
+            <TodoItem/>
+            <TodoItem/>
+            <TodoItem/>
+            <TodoItem/>
+            <TodoItem/>
+        </div>
     )
 }
 

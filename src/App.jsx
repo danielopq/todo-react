@@ -1,8 +1,9 @@
 import './App.css'
+import ChangeSkin from './assets/components/ChangeSkin';
 import TodoCreate from './assets/components/TodoCreate';
 import TodoList from './assets/components/TodoList';
-import Filter from './assets/components/Filter';
-import ChangeSkin from './assets/components/ChangeSkin';
+import TodoFilter from './assets/components/TodoFilter';
+import TodoCompleted from './assets/components/TodoCompleted';
 
 function App() {
   return (
@@ -12,11 +13,14 @@ function App() {
         <TodoCreate/>
       </header>
       <main>
-        <div id="main-container">
+      <section id="main-container">
+          <div id="todoViewer">
           <TodoList/>
-          <Filter/>
+          <TodoCompleted/>
+          </div>
+          <TodoFilter/>
           <p className='bottom-text'>Drag and drop to reorder list</p>
-        </div>
+        </section>
       </main>
     </>
   )
