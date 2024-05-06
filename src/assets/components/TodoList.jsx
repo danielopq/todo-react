@@ -1,3 +1,5 @@
+import TodoCompleted from "./TodoCompleted";
+
 const TodoList = () => {
     return (
         <section id="todoList">
@@ -26,10 +28,7 @@ const TodoList = () => {
                 <p className='todoText unCompleted'>Complete Todo App on Frontend Mentor</p>
                 <button className='delete-bt'></button>
             </article>
-            <div id="info-bar" className='whiteContainer'>
-                <p id="info" name="info">5 items left</p>
-                <button className="clear-bt">Clear Completed</button>
-            </div>
+            <TodoCompleted/>
         </section>
     )
 }
