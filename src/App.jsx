@@ -15,11 +15,6 @@ function App() {
       <main>
         <div id="main-container">
           <TodoList/>
-          <menu className='whiteContainer single-cont'>
-            <button className='bt-select'>All</button>
-            <button className='bt-select'>Active</button>
-            <button className='bt-select'>Completed</button>
-          </menu>
           <p className='bottom-text'>Drag and drop to reorder list</p>
         </div>
       </main>
