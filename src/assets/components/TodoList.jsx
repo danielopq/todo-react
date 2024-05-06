@@ -1,13 +1,11 @@
 import TodoItem from "./TodoItem";
 
-const TodoList = () => {
+const TodoList = ({todos}) => {
     return (
         <div id="todoList">
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
+            {todos.map((todo)=>(
+                <TodoItem key={todo.id} todo={todo}/>
+            ))}
         </div>
     )
 }
