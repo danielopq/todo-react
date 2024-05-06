@@ -1,10 +1,16 @@
 import './App.css'
-import Header from './assets/components/Header';
+import TodoCreate from './assets/components/TodoCreate';
 
 function App() {
   return (
     <>
-    <Header/>
+      <header>
+        <div id="title">
+          <h1>TODO</h1>
+          <button id="changeBg-bt"></button>
+        </div>
+        <TodoCreate/>
+      </header>
       <main>
         <div id="main-container">
           <section id="todoList">
