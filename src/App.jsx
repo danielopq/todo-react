@@ -2,15 +2,13 @@ import './App.css'
 import TodoCreate from './assets/components/TodoCreate';
 import TodoList from './assets/components/TodoList';
 import Filter from './assets/components/Filter';
+import ChangeSkin from './assets/components/ChangeSkin';
 
 function App() {
   return (
     <>
       <header>
-        <div id="title">
-          <h1>TODO</h1>
-          <button id="changeBg-bt"></button>
-        </div>
+        <ChangeSkin/>
         <TodoCreate/>
       </header>
       <main>
