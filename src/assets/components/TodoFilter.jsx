@@ -1,4 +1,4 @@
-const Filter = () =>{
+const TodoFilter = () =>{
     return(
         <menu className='whiteContainer single-cont'>
         <button className='bt-select'>All</button>
@@ -7,4 +7,4 @@ const Filter = () =>{
       </menu>
     )
 }
-export default Filter;
+export default TodoFilter;

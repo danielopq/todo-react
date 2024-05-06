@@ -1,6 +1,7 @@
 import './App.css'
 import TodoCreate from './assets/components/TodoCreate';
 import TodoList from './assets/components/TodoList';
+import Filter from './assets/components/Filter';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <main>
         <div id="main-container">
           <TodoList/>
+          <Filter/>
           <p className='bottom-text'>Drag and drop to reorder list</p>
         </div>
       </main>
