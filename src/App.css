@@ -169,6 +169,14 @@ h1 {
   border: none;
 }
 
+.moonBg{
+	background: transparent url(assets/images/icon-moon.svg) center/20px no-repeat;
+}
+
+.sunBg{
+	background: transparent url(assets/images/icon-sun.svg) center/20px no-repeat;
+}
+
 #newTodo {
   margin-top: 40px;
 }

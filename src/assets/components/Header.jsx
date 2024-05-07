@@ -3,7 +3,7 @@ const Header = () => {
         <header>
             <div id="title">
                 <h1>TODO</h1>
-                <button id="changeBg-bt"></button>
+                <button id="changeBg-bt" className="moonBg"></button>
             </div>
             <form>
                 <div id="newTodo" className="container cont-light-mode single-cont">
