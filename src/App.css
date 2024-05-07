@@ -34,14 +34,22 @@ input[type="text"] {
 /*------------ CONTAINERS ------------*/
 
 .container {
-  width: 327px;
-  height: 48px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0px 20px 0px 20px;
-  background-color: white;
+	width: 327px;
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0px 20px 0px 20px;
+	
+}
+
+.cont-light-mode{
+	background-color: white;
+}
+
+.cont-dark-mode{
+	background-color: #25273D;
 }
 
 .single-cont {
