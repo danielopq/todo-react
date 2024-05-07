@@ -26,6 +26,10 @@ function App() {
     setTodos([...todos, newTodo])
   }
 
+  const removeTodo = (id)=>{
+    setTodos(todos.filter((todo) => todo.id !== id))
+  }
+
   return (
     <>
       <header>
@@ -35,7 +39,7 @@ function App() {
       <main>
         <section id="main-container">
           <div id="todoViewer">
-            <TodoList todos={todos} />
+            <TodoList todos={todos} removeTodo ={removeTodo}/>
             <TodoCompleted />
           </div>
           <TodoFilter />
