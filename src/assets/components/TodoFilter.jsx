@@ -7,7 +7,7 @@ const TodoFilter = ({setFilter}) =>{
   }
 
     return(
-      <menu id="filterMenu" className='container single-cont'>
+      <menu id="filterMenu" className='container cont-light-mode single-cont'>
         <button className='bt-filter filter-active' onClick={(e)=>handleClick("all",e)}>All</button>
         <button className='bt-filter filter-inactive' onClick={(e)=>handleClick("active",e)}>Active</button>
         <button className='bt-filter filter-inactive' onClick={(e)=>handleClick("completed",e)}>Completed</button>
