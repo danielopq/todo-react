@@ -40,6 +40,20 @@ function App() {
 
   const uncompletedTodos = todos.filter((todo) => !todo.completed).length
 
+  const [filter,setFilter] = useState("all");
+
+  const filterTodos = ()=>{
+    switch (filter){
+      case "all":
+        return todos;
+      case "active":
+        return todos.filter((todo)=>!todo.completed);
+      case "completed":
+        return todos.filter((todo)=>todo.completed);
+      default:
+        return todos;
+    }
+  }
  
 
   return (
@@ -51,10 +65,10 @@ function App() {
       <main>
         <section id="main-container">
           <div id="todoViewer">
-            <TodoList todos={todos} removeTodo ={removeTodo} updateTodo={updateTodo}/>
+            <TodoList todos={filterTodos()} removeTodo ={removeTodo} updateTodo={updateTodo}/>
             <TodoCompleted uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted}/>
           </div>
-          <TodoFilter />
+          <TodoFilter setFilter={setFilter}/>
           <p className='bottom-text'>Drag and drop to reorder list</p>
         </section>
       </main>

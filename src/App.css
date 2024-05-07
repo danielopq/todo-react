@@ -112,11 +112,18 @@ button:hover {
   border: none;
 }
 
-.bt-select{
-  font: 700 12px/0px 'Josefin Bold';
-  color:#9495A5;
-  background-color: transparent;
-  border: none;
+.bt-filter {
+	font: 700 12px/0px 'Josefin Bold';
+	background-color: transparent;
+	border: none;
+}
+
+.filter-active{
+	color: #3A7CFD;
+}
+
+.filter-inactive{
+	color: #9495A5;
 }
 /*###################### HEADER ######################*/
 
