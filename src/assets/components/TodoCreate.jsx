@@ -17,7 +17,7 @@ const TodoCreate = ({createTodo}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div id="newTodo" className="whiteContainer single-cont">
+            <div id="newTodo" className="container single-cont">
                 <button className='state-bt unFinished-bt'></button>
                 <input id="createTodo" type="text" placeholder='Create a new todo...' value={title} onChange={(e)=>setTitle(e.target.value)}></input>
             </div>

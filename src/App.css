@@ -33,7 +33,7 @@ input[type="text"] {
 
 /*------------ CONTAINERS ------------*/
 
-.whiteContainer {
+.container {
   width: 327px;
   height: 48px;
   display: flex;
