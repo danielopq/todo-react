@@ -30,6 +30,18 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
 
+  const updateTodo = (id)=>{
+    setTodos(todos.map(todo=> todo.id === id ? {...todo, completed: !todo.completed} : todo))
+  }
+
+  const clearCompleted = ()=>{
+    setTodos(todos.filter((todo)=>!todo.completed));
+  }
+
+  const uncompletedTodos = todos.filter((todo) => !todo.completed).length
+
+ 
+
   return (
     <>
       <header>
@@ -39,8 +51,8 @@ function App() {
       <main>
         <section id="main-container">
           <div id="todoViewer">
-            <TodoList todos={todos} removeTodo ={removeTodo}/>
-            <TodoCompleted />
+            <TodoList todos={todos} removeTodo ={removeTodo} updateTodo={updateTodo}/>
+            <TodoCompleted uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted}/>
           </div>
           <TodoFilter />
           <p className='bottom-text'>Drag and drop to reorder list</p>

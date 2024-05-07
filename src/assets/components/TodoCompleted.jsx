@@ -1,8 +1,8 @@
-const TodoCompleted = () => {
+const TodoCompleted = ({uncompletedTodos,clearCompleted}) => {
     return (
         <div id="info-bar" className='whiteContainer'>
-            <p id="info" name="info">5 items left</p>
-            <button className="clear-bt">Clear Completed</button>
+            <p id="info" name="info">{uncompletedTodos} items left</p>
+            <button className="clear-bt" onClick={clearCompleted}>Clear Completed</button>
         </div>
     )
 }
