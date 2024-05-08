@@ -59,12 +59,12 @@ function App() {
     if (e.target.className === "moonBg") {
       e.target.className = "sunBg";
       let darkMode = document.querySelectorAll('[class*=light]');
-      darkMode.forEach( elem => elem.className = elem.className.replace("light","dark"));
+      darkMode.forEach( elem => elem.className = elem.className.replace(/light/g,"dark"));
       document.getElementsByTagName("main")[0].style.backgroundColor="#171823";
     } else {
       e.target.className = "moonBg";
       let lightMode = document.querySelectorAll('[class*=dark]');
-      lightMode.forEach( elem => elem.className = elem.className.replace("dark","light"));
+      lightMode.forEach( elem => elem.className = elem.className.replace(/dark/g,"light"));
       document.getElementsByTagName("main")[0].style.backgroundColor="white";
     }
   }
@@ -77,7 +77,7 @@ function App() {
       </header>
       <main>
         <section id="main-cont">
-          <div id="todoViewer">
+          <div id="todoViewer" className='view-light-mode'>
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} />
             <TodoCompleted uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
           </div>
