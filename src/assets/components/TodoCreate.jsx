@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TodoCreate = ({createTodo}) => {
+const TodoCreate = ({createTodo,mode}) => {
 
     const [title,setTitle] = useState("");
 

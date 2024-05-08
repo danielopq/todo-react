@@ -65,13 +65,22 @@ input[type="text"] {
   margin: 0px 13px 0px 0px;
 }
 
-.unCompleted {
+.unCompleted-light-mode {
   color: #494C6B;
 }
 
-.completed {
+.unCompleted-dark-mode {
+  color: #C8CBE7;
+}
+
+.completed-light-mode {
   text-decoration: line-through;
   color: #D1D2DA;
+}
+
+.completed-dark-mode {
+  text-decoration: line-through;
+  color: #4D5067;
 }
 
 .bottom-text {
