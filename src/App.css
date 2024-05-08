@@ -14,6 +14,12 @@
   font-weight: 700;
 }
 
+:root {
+  --light-mode-color: white;
+  --dark-mode-color: #25273D;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -25,6 +31,14 @@ input[type="text"] {
   color: #494C6B;
   border: none;
   outline: none;
+}
+
+.input-light-mode{
+  background-color: var(--light-mode-color);
+}
+
+.input-dark-mode{
+  background-color: var(--dark-mode-color);
 }
 
 ::placeholder {
