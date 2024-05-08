@@ -33,14 +33,6 @@ input[type="text"] {
   outline: none;
 }
 
-.input-light-mode{
-  background-color: var(--light-mode-color);
-}
-
-.input-dark-mode{
-  background-color: var(--dark-mode-color);
-}
-
 ::placeholder {
   color: #9495A5;
 }
@@ -57,20 +49,12 @@ input[type="text"] {
   padding: 0px 20px 0px 20px;
 }
 
-.cont-light-mode {
-  background-color: var(--light-mode-color);
-}
-
-.cont-dark-mode {
-  background-color: var(--dark-mode-color);
-}
-
-.single-cont {
-  border-radius: 5px;
-}
-
-.task {
+.task-light-mode {
   border-bottom: solid 1px #E3E4F1;
+}
+
+.task-dark-mode {
+  border-bottom: solid 1px #494C6B;
 }
 
 /*------------ TEXT ------------*/
@@ -106,14 +90,13 @@ button:hover {
 .state-bt {
   width: 20px;
   height: 20px;
-  background-color: white;
   border-radius: 10px;
   margin-right: 12px;
   outline: none;
 }
 
 .unFinished-bt {
-  border: solid 1px #979797;
+  border: solid 1px #494C6B;
 }
 
 .finished-bt {
@@ -149,6 +132,16 @@ button:hover {
   color: #9495A5;
 }
 
+/*------------ DARK/LIGHT MODE BACKGROUND------------*/
+
+.bg-light-mode{
+  background-color: var(--light-mode-color);
+}
+
+.bg-dark-mode{
+  background-color: var(--dark-mode-color);
+}
+
 /*###################### HEADER ######################*/
 
 header {
@@ -176,6 +169,10 @@ header {
   justify-content: space-between;
   margin: 48px auto 0px;
   color: white;
+}
+
+#newTodo{
+  border-radius: 5px;
 }
 
 h1 {

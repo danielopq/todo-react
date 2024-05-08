@@ -17,9 +17,9 @@ const TodoCreate = ({createTodo}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div id="newTodo" className="container cont-light-mode single-cont">
-                <button className='state-bt unFinished-bt'></button>
-                <input id="createTodo" className="input-light-mode" type="text" placeholder='Create a new todo...' value={title} onChange={(e)=>setTitle(e.target.value)}></input>
+            <div id="newTodo" className="container bg-light-mode">
+                <button className='state-bt unFinished-bt bg-light-mode'></button>
+                <input id="createTodo" className="bg-light-mode" type="text" placeholder='Create a new todo...' value={title} onChange={(e)=>setTitle(e.target.value)}></input>
             </div>
         </form>
     )
