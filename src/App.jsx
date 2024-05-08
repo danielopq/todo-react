@@ -58,14 +58,16 @@ function App() {
   const switchSkin = (e) => {
     if (e.target.className === "moonBg") {
       e.target.className = "sunBg";
+      document.getElementById("topSite").className = "head-dark-mode"
     } else {
       e.target.className = "moonBg";
+      document.getElementById("topSite").className = "head-light-mode"
     }
   }
 
   return (
     <>
-      <header>
+      <header id="topSite" className='head-light-mode'>
         <SkinSwitcher switchSkin={switchSkin} />
         <TodoCreate createTodo={createTodo} />
       </header>

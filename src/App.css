@@ -141,7 +141,15 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+}
+
+.head-light-mode{
   background: url(assets/images/bg-mobile-light.jpg) center/100vw no-repeat;
+}
+
+.head-dark-mode{
+  background: url(assets/images/bg-mobile-dark.jpg) center/100vw no-repeat;
 }
 
 #title {
