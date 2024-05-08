@@ -34,22 +34,22 @@ input[type="text"] {
 /*------------ CONTAINERS ------------*/
 
 .container {
-	width: 327px;
-	height: 48px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-start;
-	padding: 0px 20px 0px 20px;
-	
+  width: 327px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 20px 0px 20px;
+
 }
 
-.cont-light-mode{
-	background-color: white;
+.cont-light-mode {
+  background-color: white;
 }
 
-.cont-dark-mode{
-	background-color: #25273D;
+.cont-dark-mode {
+  background-color: #25273D;
 }
 
 .single-cont {
@@ -76,12 +76,14 @@ input[type="text"] {
   text-decoration: line-through;
   color: #D1D2DA;
 }
-.bottom-text{
+
+.bottom-text {
   font: 400 14px/0px 'Josefin Regular';
-  color:#9495A5;
+  color: #9495A5;
   text-align: center;
   margin-top: 40px;
 }
+
 /*------------ BUTTONS ------------*/
 
 button:hover {
@@ -121,18 +123,19 @@ button:hover {
 }
 
 .bt-filter {
-	font: 700 12px/0px 'Josefin Bold';
-	background-color: transparent;
-	border: none;
+  font: 700 12px/0px 'Josefin Bold';
+  background-color: transparent;
+  border: none;
 }
 
-.filter-active{
-	color: #3A7CFD;
+.filter-active {
+  color: #3A7CFD;
 }
 
-.filter-inactive{
-	color: #9495A5;
+.filter-inactive {
+  color: #9495A5;
 }
+
 /*###################### HEADER ######################*/
 
 header {
@@ -141,14 +144,13 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
-.head-light-mode{
+.head-light-mode {
   background: url(assets/images/bg-mobile-light.jpg) center/100vw no-repeat;
 }
 
-.head-dark-mode{
+.head-dark-mode {
   background: url(assets/images/bg-mobile-dark.jpg) center/100vw no-repeat;
 }
 
@@ -176,12 +178,12 @@ h1 {
   border: none;
 }
 
-.moonBg{
+.moonBg {
   background: transparent url(assets/images/icon-moon.svg) center/20px no-repeat;
 }
 
-.sunBg{
-	background: transparent url(assets/images/icon-sun.svg) center/20px no-repeat;
+.sunBg {
+  background: transparent url(assets/images/icon-sun.svg) center/20px no-repeat;
 }
 
 #newTodo {
@@ -205,7 +207,7 @@ main {
   transform: translateX(-50%);
 }
 
-#todoList {
+#todoViewer {
   overflow: hidden;
   box-shadow: 0px 35px 50px -15px hsla(237, 19.6%, 80%, 0.5);
   border-radius: 5px;
