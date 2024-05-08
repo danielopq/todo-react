@@ -58,11 +58,13 @@ function App() {
   const switchSkin = (e) => {
     if (e.target.className === "moonBg") {
       e.target.className = "sunBg";
-      document.getElementsByTagName("header")[0].className = "head-dark-mode"
+      let darkMode = document.querySelectorAll('[class*=light]');
+      darkMode.forEach( elem => elem.className = elem.className.replace("light","dark"));
       document.getElementsByTagName("main")[0].style.backgroundColor="#171823";
     } else {
       e.target.className = "moonBg";
-      document.getElementsByTagName("header")[0].className = "head-light-mode";
+      let lightMode = document.querySelectorAll('[class*=dark]');
+      lightMode.forEach( elem => elem.className = elem.className.replace("dark","light"));
       document.getElementsByTagName("main")[0].style.backgroundColor="white";
     }
   }
@@ -74,7 +76,7 @@ function App() {
         <TodoCreate createTodo={createTodo} />
       </header>
       <main>
-        <section id="main-container">
+        <section id="main-cont">
           <div id="todoViewer">
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} />
             <TodoCompleted uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />

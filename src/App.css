@@ -41,7 +41,6 @@ input[type="text"] {
   align-items: center;
   justify-content: flex-start;
   padding: 0px 20px 0px 20px;
-
 }
 
 .cont-light-mode {
@@ -198,7 +197,7 @@ main {
   background-color: #F2F2F2;
 }
 
-#main-container {
+#main-cont {
   width: 327px;
   position: absolute;
   z-index: 1;
