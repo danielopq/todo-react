@@ -17,6 +17,10 @@
 :root {
   --light-mode-color: white;
   --dark-mode-color: #25273D;
+  --light-mode-bt-color: #9495A5;
+  --dark-mode-bt-color: #5B5E7E;
+  --light-mode-bt-color-hover: #9495A5;
+  --dark-mode-bt-color-hover: #E3E4F1;
 }
 
 
@@ -122,7 +126,6 @@ button:hover {
 
 .clear-bt {
   font: 400 12px/0px 'Josefin Regular';
-  color: #9495A5;
   background-color: transparent;
   border: none;
 }
@@ -140,6 +143,23 @@ button:hover {
 .filter-inactive {
   color: #9495A5;
 }
+
+.bt-light-mode{
+  color: var(--light-mode-bt-color);
+}
+
+.bt-light-mode:hover{
+  color: var(--light-mode-bt-color-hover);
+}
+
+.bt-dark-mode{
+  color: var(--dark-mode-bt-color);
+}
+
+.bt-dark-mode:hover{
+  color: var(--dark-mode-bt-color-hover);
+}
+
 
 /*------------ DARK/LIGHT MODE BACKGROUND------------*/
 
