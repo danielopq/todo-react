@@ -58,10 +58,12 @@ function App() {
   const switchSkin = (e) => {
     if (e.target.className === "moonBg") {
       e.target.className = "sunBg";
-      document.getElementById("topSite").className = "head-dark-mode"
+      document.getElementsByTagName("header")[0].className = "head-dark-mode"
+      document.getElementsByTagName("main")[0].style.backgroundColor="#171823";
     } else {
       e.target.className = "moonBg";
-      document.getElementById("topSite").className = "head-light-mode"
+      document.getElementsByTagName("header")[0].className = "head-light-mode";
+      document.getElementsByTagName("main")[0].style.backgroundColor="white";
     }
   }
 
