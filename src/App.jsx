@@ -85,7 +85,7 @@ function App() {
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode}/>
             <TodoCompleted uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
           </div>
-          <TodoFilter setFilter={setFilter} />
+          <TodoFilter setFilter={setFilter} mode={mode}/>
           <p className='bottom-text'>Drag and drop to reorder list</p>
         </section>
       </main>
