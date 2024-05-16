@@ -87,6 +87,14 @@ input[type="text"] {
   color: #4D5067;
 }
 
+.unCompleted-light-mode:hover, .unCompleted-dark-mode:hover{
+  cursor:grab;
+}
+
+.unCompleted-light-mode:active, .unCompleted-dark-mode:active{
+  cursor:grabbing;
+}
+
 .bottom-text {
   font: 400 14px/0px 'Josefin Regular';
   color: #9495A5;
