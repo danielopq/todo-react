@@ -1,5 +1,5 @@
 import './App.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SkinSwitcher from './assets/components/SkinSwitcher';
 import TodoCreate from './assets/components/TodoCreate';
 import TodoList from './assets/components/TodoList';
@@ -7,19 +7,25 @@ import TodoFilter from './assets/components/TodoFilter';
 import TodoCompleted from './assets/components/TodoCompleted';
 
 
-const initialStateTodos = [
-  { id: 1, title: "Complete online JavaScript course", completed: true },
-  { id: 2, title: "Jog around the park 3x", completed: false },
-  { id: 3, title: "10 minutes meditation", completed: false },
-  { id: 4, title: "Read for 1 hour", completed: false },
-  { id: 5, title: "Pick up groceries", completed: false },
-  { id: 6, title: "Complete Todo App on Frontend Mentor", completed: false }
-];
+// const initialStateTodos = [
+//   { id: 1, title: "Complete online JavaScript course", completed: true },
+//   { id: 2, title: "Jog around the park 3x", completed: false },
+//   { id: 3, title: "10 minutes meditation", completed: false },
+//   { id: 4, title: "Read for 1 hour", completed: false },
+//   { id: 5, title: "Pick up groceries", completed: false },
+//   { id: 6, title: "Complete Todo App on Frontend Mentor", completed: false }
+// ];
+
+const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
 let mode = "light";
 function App() {
   
   const [todos, setTodos] = useState(initialStateTodos);
+
+  useEffect(()=>{
+    localStorage.setItem("todos",JSON.stringify(todos));
+  },[todos]);
 
   const createTodo = (title) => {
     const newTodo = {
