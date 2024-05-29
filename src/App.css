@@ -116,7 +116,7 @@ button:hover {
   outline: none;
 }
 
-.unFinished-bt-light-mode, .unFinished-bt-dark-mode{
+.unFinished-bt-light-mode, .unFinished-bt-dark-mode, .create-bt{
   border: solid 1px #494C6B;
 }
 
