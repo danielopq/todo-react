@@ -9,7 +9,7 @@ const TodoItem = ({todo,removeTodo,updateTodo,mode}) => {
 
     const buttonClass = ()=>{
         let btClass = "";
-        completed ? btClass = 'state-bt finished-bt bg-light-mode' : btClass = 'state-bt unFinished-bt bg-light-mode';
+        completed ? btClass = 'state-bt finished-bt bg-light-mode' : btClass = 'state-bt unFinished-bt-light-mode bg-light-mode';
         mode === "dark" && (btClass = btClass.replace(/light/g,"dark"));
         return btClass;
     }

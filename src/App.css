@@ -116,8 +116,18 @@ button:hover {
   outline: none;
 }
 
-.unFinished-bt {
+.unFinished-bt-light-mode, .unFinished-bt-dark-mode{
   border: solid 1px #494C6B;
+}
+
+.unFinished-bt-light-mode:hover {
+  border: solid 1px transparent;
+  background: linear-gradient(var(--light-mode-color), var(--light-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
+}
+
+.unFinished-bt-dark-mode:hover {
+  border: solid 1px transparent;
+  background: linear-gradient(var(--dark-mode-color), var(--dark-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
 }
 
 .finished-bt {
