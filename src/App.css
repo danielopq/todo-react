@@ -27,9 +27,24 @@
   box-sizing: border-box;
 }
 
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #FAFAFA; */
+  background-color: red;
+}
+
 p{
   margin: 0px;
   padding:0px;
+}
+
+button {
+  cursor: pointer;
 }
 
 /*------------ CONTAINERS ------------*/
@@ -53,16 +68,6 @@ p{
 }
 
 /*------------ BUTTONS ------------*/
-
-button:hover {
-  cursor: pointer;
-}
-
-.clear-bt {
-  font: 400 12px/0px 'Josefin Regular';
-  background-color: transparent;
-  border: none;
-}
 
 .bt-filter {
   font: 700 12px/0px 'Josefin Bold';
@@ -108,8 +113,8 @@ button:hover {
 /*###################### HEADER ######################*/
 
 header {
-  width: 100vw;
-  height: 200px;
+  width: 1440px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,6 +141,7 @@ header {
 
 #newTodo{
   border-radius: 5px;
+  margin-top: 40px;
 }
 
 h1 {
@@ -145,15 +151,12 @@ h1 {
   letter-spacing: 10px;
 }
 
-#newTodo {
-  margin-top: 40px;
-}
 
 /*###################### MAIN ######################*/
 
 main {
-  width: 100vw;
-  height: 100vh;
+  width: 1440px;
+  height: 100%;
   background-color: #F2F2F2;
 }
 
@@ -177,21 +180,6 @@ main {
 
 .view-dark-mode{
   box-shadow: none;
-}
-
-#info-bar {
-  margin: 0px;
-  font: 400 12px/0px 'Josefin Regular';
-  color: #9495A5;
-  justify-content: space-between !important;
-}
-
-.info-light-mode{
-  color: var(--light-mode-bt-color);
-}
-
-.info-dark-mode{
-  color: var(--dark-mode-bt-color);
 }
 
 menu{

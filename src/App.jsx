@@ -4,7 +4,7 @@ import SkinSwitch from './assets/components/SkinSwitch/SkinSwitch';
 import CreateTodo from './assets/components/CreateTodo/CreateTodo';
 import TodoList from './assets/components/TodoList/TodoList';
 import TodoFilter from './assets/components/TodoFilter/TodoFilter';
-import TodoCompleted from './assets/components/TodoCompleted/TodoCompleted';
+import InfoBar from './assets/components/InfoBar/InfoBar';
 
 
 // const initialStateTodos = [
@@ -88,7 +88,7 @@ function App() {
         <section id="main-cont">
           <div id="todoViewer" className='view-light-mode'>
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
-            <TodoCompleted uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
+            <InfoBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
           </div>
           <TodoFilter setFilter={setFilter} mode={mode} />
           <p className='bottom-text'>Drag and drop to reorder list</p>
