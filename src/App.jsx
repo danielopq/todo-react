@@ -1,10 +1,10 @@
 import './App.css'
 import { useEffect, useState } from 'react';
-import SkinSwitcher from './assets/components/SkinSwitcher';
-import TodoCreate from './assets/components/TodoCreate';
-import TodoList from './assets/components/TodoList';
-import TodoFilter from './assets/components/TodoFilter';
-import TodoCompleted from './assets/components/TodoCompleted';
+import SkinSwitcher from './assets/components/SkinSwitcher/SkinSwitcher';
+import TodoCreate from './assets/components/TodoCreate/TodoCreate';
+import TodoList from './assets/components/TodoList/TodoList';
+import TodoFilter from './assets/components/TodoFilter/TodoFilter';
+import TodoCompleted from './assets/components/TodoCompleted/TodoCompleted';
 
 
 // const initialStateTodos = [
