@@ -1,7 +1,7 @@
 import './App.css'
 import { useEffect, useState } from 'react';
 import SkinSwitch from './assets/components/SkinSwitch/SkinSwitch';
-import TodoCreate from './assets/components/TodoCreate/TodoCreate';
+import CreateTodo from './assets/components/CreateTodo/CreateTodo';
 import TodoList from './assets/components/TodoList/TodoList';
 import TodoFilter from './assets/components/TodoFilter/TodoFilter';
 import TodoCompleted from './assets/components/TodoCompleted/TodoCompleted';
@@ -18,9 +18,8 @@ import TodoCompleted from './assets/components/TodoCompleted/TodoCompleted';
 
 const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
-let mode = "light";
 function App() {
-
+  const [mode,setMode] = useState('light')
   const [todos, setTodos] = useState(initialStateTodos);
 
   useEffect(() => {
@@ -65,12 +64,14 @@ function App() {
 
   const switchSkin = (e) => {
     if (e.target.className === "moonBg") {
-      mode = "dark";
+      setMode('dark');
+      e.target.className = "sunBg";
       let darkMode = document.querySelectorAll('[class*=light]');
       darkMode.forEach(elem => elem.className = elem.className.replace(/light/g, "dark"));
       document.getElementsByTagName("main")[0].style.backgroundColor = "#171823";
     } else {
-      mode = "light";
+      setMode('light');
+      e.target.className = "moonBg";
       let lightMode = document.querySelectorAll('[class*=dark]');
       lightMode.forEach(elem => elem.className = elem.className.replace(/dark/g, "light"));
       document.getElementsByTagName("main")[0].style.backgroundColor = "white";
@@ -81,7 +82,7 @@ function App() {
     <>
       <header id="topSite" className='head-light-mode'>
         <SkinSwitch mode={mode} switchSkin={switchSkin} />
-        <TodoCreate createTodo={createTodo} />
+        <CreateTodo mode={mode} createTodo={createTodo} />
       </header>
       <main>
         <section id="main-cont">

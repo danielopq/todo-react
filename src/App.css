@@ -23,7 +23,6 @@
   --dark-mode-bt-color-hover: #E3E4F1;
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -33,29 +32,15 @@ p{
   padding:0px;
 }
 
-/*------------ INPUT ------------*/
-
-input[type="text"] {
-  font: 400 12px/0px 'Josefin Regular';
-  color: #494C6B;
-  border: none;
-  outline: none;
-}
-
-::placeholder {
-  color: #9495A5;
-}
-
 /*------------ CONTAINERS ------------*/
 
 .container {
   width: 327px;
   height: 48px;
-  display: flex;
-  flex-direction: row;
+  margin-top: 40px;
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0px 20px 0px 20px;
+  padding: 0px 20px;
 }
 
 /*------------ TEXT ------------*/
@@ -71,18 +56,6 @@ input[type="text"] {
 
 button:hover {
   cursor: pointer;
-}
-
-.state-bt {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  margin-right: 12px;
-  outline: none;
-}
-
-.create-bt{
-  border: solid 1px #494C6B;
 }
 
 .clear-bt {

@@ -1,0 +1,31 @@
+#createTodo {
+    width: 327px;
+    height: 48px;
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+#createTodo>div {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-right: 12px;
+    border: solid 1px #494C6B;
+    background-color: transparent;
+    outline: none;
+}
+
+input[type="text"] {
+    width: 230px;
+    font: 400 12px/0px 'Josefin Regular';
+    color: #494C6B;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: #9495A5;
+}
