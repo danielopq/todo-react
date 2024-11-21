@@ -1,6 +1,6 @@
 import './App.css'
 import { useEffect, useState } from 'react';
-import SkinSwitcher from './assets/components/SkinSwitcher/SkinSwitcher';
+import SkinSwitch from './assets/components/SkinSwitch/SkinSwitch';
 import TodoCreate from './assets/components/TodoCreate/TodoCreate';
 import TodoList from './assets/components/TodoList/TodoList';
 import TodoFilter from './assets/components/TodoFilter/TodoFilter';
@@ -20,12 +20,12 @@ const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
 
 let mode = "light";
 function App() {
-  
+
   const [todos, setTodos] = useState(initialStateTodos);
 
-  useEffect(()=>{
-    localStorage.setItem("todos",JSON.stringify(todos));
-  },[todos]);
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const createTodo = (title) => {
     const newTodo = {
@@ -66,32 +66,30 @@ function App() {
   const switchSkin = (e) => {
     if (e.target.className === "moonBg") {
       mode = "dark";
-      e.target.className = "sunBg";
       let darkMode = document.querySelectorAll('[class*=light]');
-      darkMode.forEach( elem => elem.className = elem.className.replace(/light/g,"dark"));
-      document.getElementsByTagName("main")[0].style.backgroundColor="#171823";
+      darkMode.forEach(elem => elem.className = elem.className.replace(/light/g, "dark"));
+      document.getElementsByTagName("main")[0].style.backgroundColor = "#171823";
     } else {
       mode = "light";
-      e.target.className = "moonBg";
       let lightMode = document.querySelectorAll('[class*=dark]');
-      lightMode.forEach( elem => elem.className = elem.className.replace(/dark/g,"light"));
-      document.getElementsByTagName("main")[0].style.backgroundColor="white";
+      lightMode.forEach(elem => elem.className = elem.className.replace(/dark/g, "light"));
+      document.getElementsByTagName("main")[0].style.backgroundColor = "white";
     }
   }
 
   return (
     <>
       <header id="topSite" className='head-light-mode'>
-        <SkinSwitcher switchSkin={switchSkin} />
-        <TodoCreate createTodo={createTodo}/>
+        <SkinSwitch mode={mode} switchSkin={switchSkin} />
+        <TodoCreate createTodo={createTodo} />
       </header>
       <main>
         <section id="main-cont">
           <div id="todoViewer" className='view-light-mode'>
-            <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode}/>
+            <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
             <TodoCompleted uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
           </div>
-          <TodoFilter setFilter={setFilter} mode={mode}/>
+          <TodoFilter setFilter={setFilter} mode={mode} />
           <p className='bottom-text'>Drag and drop to reorder list</p>
         </section>
       </main>
