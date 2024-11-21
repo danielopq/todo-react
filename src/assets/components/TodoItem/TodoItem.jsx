@@ -1,33 +1,48 @@
 import './todoItem.css';
 
-const TodoItem = ({todo,removeTodo,updateTodo,mode}) => {
-    const{id,title,completed} = todo;
+const TodoItem = ({ todo, removeTodo, updateTodo, mode }) => {
+    const { id, title, completed } = todo;
 
-    const articleClass = ()=>{
+    /**
+     * Get the CSS class for the todo container.
+     * Dynamically updates the class based on the selected mode (light or dark).
+     * @returns {string} - The CSS class for the todo container.
+     */
+    const todoClass = () => {
         let artClass = "todo bg-light-mode task-light-mode";
-        if(mode === "dark"){artClass = artClass.replace(/light/g,"dark");}
+        if (mode === "dark") { artClass = artClass.replace(/light/g, "dark"); }
         return artClass;
     }
 
-    const buttonClass = ()=>{
+    /**
+     * Get the CSS class for the state button.
+     * Dynamically updates the class based on the completion status and mode (light or dark).
+     * @returns {string} - The CSS class for the state button.
+     */
+    const buttonStateClass = () => {
         let btClass = "";
-        completed ? btClass = 'state-bt finished-bt bg-light-mode' : btClass = 'state-bt unFinished-bt-light bg-light-mode';
-        mode === "dark" && (btClass = btClass.replace(/light/g,"dark"));
+        completed ? btClass = 'finished-bt' : btClass = 'unFinished-bt-light';
+        mode === "dark" && (btClass = btClass.replace(/light/g, "dark"));
         return btClass;
     }
-    
-    const paragClass = ()=>{
+
+    /**
+     * Get the CSS class for the todo title.
+     * Dynamically updates the class based on the completion status and mode (light or dark).
+     * @returns {string} - The CSS class for the todo title.
+     */
+    const titleStateClass = () => {
         let pClass = "";
-        completed ? pClass = 'todoText completedTask-light' : pClass = 'todoText unCompletedTask-light'
-        mode === "dark" && (pClass = pClass.replace(/light/g,"dark"));
+        completed ? pClass = 'completedTask-light' : pClass = 'unCompletedTask-light'
+        mode === "dark" && (pClass = pClass.replace(/light/g, "dark"));
         return pClass;
     }
 
     return (
-        <div id={id} className={articleClass()}>
-            <button className={buttonClass()} onClick={()=>updateTodo(id)}></button>
-            <p className={paragClass()}>{title}</p>
-            <button className='delete-bt' onClick={()=>removeTodo(id)}></button>
+        <div id={id} className={todoClass()}>
+            <button className={buttonStateClass()} onClick={() => updateTodo(id)}></button>
+            <p className={titleStateClass()}>{title}</p>
+            <button className='delete-bt' onClick={() => removeTodo(id)}></button>
         </div>
     )
 }
