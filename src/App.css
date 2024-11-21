@@ -28,6 +28,11 @@
   box-sizing: border-box;
 }
 
+p{
+  margin: 0px;
+  padding:0px;
+}
+
 /*------------ INPUT ------------*/
 
 input[type="text"] {
@@ -63,38 +68,6 @@ input[type="text"] {
 
 /*------------ TEXT ------------*/
 
-.todoText {
-  width: 230px;
-  font: 400 12px/0px 'Josefin Regular';
-  margin: 0px 13px 0px 0px;
-}
-
-.unCompleted-light-mode {
-  color: #494C6B;
-}
-
-.unCompleted-dark-mode {
-  color: #C8CBE7;
-}
-
-.completed-light-mode {
-  text-decoration: line-through;
-  color: #D1D2DA;
-}
-
-.completed-dark-mode {
-  text-decoration: line-through;
-  color: #4D5067;
-}
-
-.unCompleted-light-mode:hover, .unCompleted-dark-mode:hover{
-  cursor:grab;
-}
-
-.unCompleted-light-mode:active, .unCompleted-dark-mode:active{
-  cursor:grabbing;
-}
-
 .bottom-text {
   font: 400 14px/0px 'Josefin Regular';
   color: #9495A5;
@@ -116,30 +89,8 @@ button:hover {
   outline: none;
 }
 
-.unFinished-bt-light-mode, .unFinished-bt-dark-mode, .create-bt{
+.create-bt{
   border: solid 1px #494C6B;
-}
-
-.unFinished-bt-light-mode:hover {
-  border: solid 1px transparent;
-  background: linear-gradient(var(--light-mode-color), var(--light-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
-}
-
-.unFinished-bt-dark-mode:hover {
-  border: solid 1px transparent;
-  background: linear-gradient(var(--dark-mode-color), var(--dark-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
-}
-
-.finished-bt {
-  border: none;
-  background: url("assets/images/icon-check.svg") center/8px no-repeat, linear-gradient(-45deg, #C058F3, #55DDFF);
-}
-
-.delete-bt {
-  width: 12px;
-  height: 12px;
-  background: url("assets/images/icon-cross.svg") center/12px no-repeat;
-  border: none;
 }
 
 .clear-bt {

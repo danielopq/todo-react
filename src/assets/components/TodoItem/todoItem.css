@@ -1,0 +1,69 @@
+.todo {
+    width: 327px;
+    height: 48px;
+    display:inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 20px;
+  }
+
+.delete-bt {
+    width: 12px;
+    height: 12px;
+    background: url("./img/icon-cross.svg") center/12px no-repeat;
+    border: none;
+}
+
+.todoText {
+    width: 230px;
+    font: 400 12px/0px 'Josefin Regular';
+    margin-right: 13px;
+}
+
+.unCompletedTask-light {
+    color: #494C6B;
+}
+
+.unCompletedTask-dark {
+    color: #C8CBE7;
+}
+
+.completedTask-light {
+    text-decoration: line-through;
+    color: #D1D2DA;
+}
+
+.completedTask-dark {
+    text-decoration: line-through;
+    color: #4D5067;
+}
+
+.unCompletedTask-light:hover,
+.unCompletedTask-dark:hover {
+    cursor: grab;
+}
+
+.unCompletedTask-light:active,
+.unCompletedTask-dark:active {
+    cursor: grabbing;
+}
+
+
+.unFinished-bt-light, .unFinished-bt-dark{
+    border: solid 1px #494C6B;
+  }
+  
+  .unFinished-bt-light:hover {
+    border: solid 1px transparent;
+    background: linear-gradient(var(--light-mode-color), var(--light-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
+  }
+  
+  .unFinished-bt-dark:hover {
+    border: solid 1px transparent;
+    background: linear-gradient(var(--dark-mode-color), var(--dark-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
+  }
+  
+  .finished-bt {
+    border: none;
+    background: url("./img/icon-check.svg") center/8px no-repeat, linear-gradient(-45deg, #C058F3, #55DDFF);
+  }
