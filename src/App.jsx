@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import SkinSwitch from './assets/components/SkinSwitch/SkinSwitch';
 import CreateTodo from './assets/components/CreateTodo/CreateTodo';
 import TodoList from './assets/components/TodoList/TodoList';
-import TodoFilter from './assets/components/TodoFilter/TodoFilter';
-import InfoBar from './assets/components/InfoBar/InfoBar';
-
+import {MainMenuBar,MobileFilterMenuBar} from './assets/components/MenuBar/MenuBar';
 
 // const initialStateTodos = [
 //   { id: 1, title: "Complete online JavaScript course", completed: true },
@@ -88,9 +86,9 @@ function App() {
         <section id="main-cont">
           <div id="todoViewer" className='view-light-mode'>
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
-            <InfoBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
+            <MainMenuBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
           </div>
-          <TodoFilter setFilter={setFilter} mode={mode} />
+          <MobileFilterMenuBar mode={mode} setFilter={setFilter} />
           <p className='bottom-text'>Drag and drop to reorder list</p>
         </section>
       </main>

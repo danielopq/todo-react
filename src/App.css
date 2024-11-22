@@ -34,13 +34,18 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: #FAFAFA; */
+  background-color: #FAFAFA;
   background-color: red;
 }
 
 p{
   margin: 0px;
   padding:0px;
+}
+
+menu{
+  margin: 0px;
+  padding: 0px;
 }
 
 button {
@@ -67,39 +72,6 @@ button {
   margin-top: 40px;
 }
 
-/*------------ BUTTONS ------------*/
-
-.bt-filter {
-  font: 700 12px/0px 'Josefin Bold';
-  background-color: transparent;
-  border: none;
-}
-
-.filter-active {
-  color: #3A7CFD;
-}
-
-.filter-inactive-light-mode {
-  color: #9495A5;
-}
-
-.bt-light-mode{
-  color: var(--light-mode-bt-color);
-}
-
-.bt-light-mode:hover{
-  color: var(--light-mode-bt-color-hover);
-}
-
-.bt-dark-mode{
-  color: var(--dark-mode-bt-color);
-}
-
-.bt-dark-mode:hover{
-  color: var(--dark-mode-bt-color-hover);
-}
-
-
 /*------------ DARK/LIGHT MODE BACKGROUND------------*/
 
 .bg-light-mode{
@@ -113,8 +85,8 @@ button {
 /*###################### HEADER ######################*/
 
 header {
-  width: 1440px;
-  height: 300px;
+  width: inherit;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
