@@ -10,8 +10,18 @@ const MainMenuBar = ({ mode, uncompletedTodos, clearCompleted }) => {
 }
 
 const MobileFilterMenuBar = ({ setFilter, mode }) => {
+  const darkModeStyle={
+    backgroundColor: '#25273D',
+    boxShadow: 'none',
+  }
+
+  const lightModeStyle={
+    backgroundColor: 'white',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+  }
+
   return (
-    <menu id="mobileFilterMenuBar" className='menuBar' style={{ backgroundColor: mode === 'dark' ? '#25273D' : 'white' }}>
+    <menu id="mobileFilterMenuBar" className='menuBar' style={mode === 'dark' ? darkModeStyle : lightModeStyle}>
       <FilterMenu setFilter={setFilter} mode={mode}/>
     </menu>
   )
