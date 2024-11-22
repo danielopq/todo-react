@@ -9,7 +9,7 @@ const TodoItem = ({ todo, removeTodo, updateTodo, mode }) => {
      * @returns {string} - The CSS class for the todo container.
      */
     const todoClass = () => {
-        let artClass = "todo bg-light-mode task-light-mode";
+        let artClass = "todo task-light-mode";
         if (mode === "dark") { artClass = artClass.replace(/light/g, "dark"); }
         return artClass;
     }
@@ -39,7 +39,7 @@ const TodoItem = ({ todo, removeTodo, updateTodo, mode }) => {
     }
 
     return (
-        <div id={id} className={todoClass()}>
+        <div id={id} className={ mode === 'dark' ? 'todo task-dark' : 'todo task-light'} style={{ backgroundColor: mode === 'dark' ? '#25273D' : 'white' }}>
             <button className={buttonStateClass()} onClick={() => updateTodo(id)}></button>
             <p className={titleStateClass()}>{title}</p>
             <button className='delete-bt' onClick={() => removeTodo(id)}></button>

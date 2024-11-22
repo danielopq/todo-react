@@ -1,4 +1,7 @@
-.bottom-text {
+footer{
+  margin-bottom: 72px;
+}
+footer p {
     font: 400 14px/0px 'Josefin Regular';
     color: #9495A5;
     text-align: center;

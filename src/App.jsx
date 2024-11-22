@@ -65,27 +65,23 @@ function App() {
     if (e.target.className === "moonBg") {
       setMode('dark');
       e.target.className = "sunBg";
-      let darkMode = document.querySelectorAll('[class*=light]');
-      darkMode.forEach(elem => elem.className = elem.className.replace(/light/g, "dark"));
-      document.getElementsByTagName("main")[0].style.backgroundColor = "#171823";
+      document.getElementsByTagName("body")[0].style.backgroundColor = "#171823";
     } else {
       setMode('light');
       e.target.className = "moonBg";
-      let lightMode = document.querySelectorAll('[class*=dark]');
-      lightMode.forEach(elem => elem.className = elem.className.replace(/dark/g, "light"));
-      document.getElementsByTagName("main")[0].style.backgroundColor = "white";
+      document.getElementsByTagName("body")[0].style.backgroundColor = "#FAFAFA";
     }
   }
 
   return (
     <>
-      <header id="topSite" className='head-light-mode'>
+      <header id="topSite" className={mode === 'dark' ? 'headerDarkMode' : 'headerLightMode'}>
         <SkinSwitch mode={mode} switchSkin={switchSkin} />
         <CreateTodo mode={mode} createTodo={createTodo} />
       </header>
       <main>
         <section id="main-cont">
-          <div id="todoViewer" className='view-light-mode'>
+          <div id="todoViewer" className={mode === 'dark' ? 'viewerDarkMode' : 'viewerLightMode'}>
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
             <MainMenuBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
           </div>
