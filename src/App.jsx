@@ -4,6 +4,7 @@ import SkinSwitch from './assets/components/SkinSwitch/SkinSwitch';
 import CreateTodo from './assets/components/CreateTodo/CreateTodo';
 import TodoList from './assets/components/TodoList/TodoList';
 import {MainMenuBar,MobileFilterMenuBar} from './assets/components/MenuBar/MenuBar';
+import Footer from './assets/components/Footer/Footer';
 
 // const initialStateTodos = [
 //   { id: 1, title: "Complete online JavaScript course", completed: true },
@@ -88,10 +89,10 @@ function App() {
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
             <MainMenuBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} />
           </div>
-          <MobileFilterMenuBar mode={mode} setFilter={setFilter} />
-          <p className='bottom-text'>Drag and drop to reorder list</p>
-        </section>
+          <MobileFilterMenuBar mode={mode} setFilter={setFilter} /> 
+        </section>  
       </main>
+      <Footer/>
     </>
   )
 }
