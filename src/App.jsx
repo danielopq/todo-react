@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import SkinSwitch from './assets/components/SkinSwitch/SkinSwitch';
 import CreateTodo from './assets/components/CreateTodo/CreateTodo';
 import TodoList from './assets/components/TodoList/TodoList';
-import { MainMenuBar, MobileFilterMenuBar } from './assets/components/MenuBar/MenuBar';
+import { MainNavBar, MobileFilterNavBar } from './assets/components/NavBar/NavBar';
 import Footer from './assets/components/Footer/Footer';
 
 const defaultTodos = [
@@ -81,13 +81,13 @@ function App() {
         <CreateTodo mode={mode} createTodo={createTodo} />
       </header>
       <main>
-        <section id="main-cont">
+        <div id="main-cont">
           <div id="todoViewer" className={mode === 'dark' ? 'viewerDarkMode' : 'viewerLightMode'}>
             <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
-            <MainMenuBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} setFilter={setFilter} />
+            <MainNavBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} setFilter={setFilter} />
           </div>
-          <MobileFilterMenuBar mode={mode} setFilter={setFilter} />
-        </section>
+          <MobileFilterNavBar mode={mode} setFilter={setFilter} />
+        </div>
       </main>
       <Footer />
     </>

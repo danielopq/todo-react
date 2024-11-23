@@ -1,4 +1,4 @@
-.menuBar {
+.navBar {
   width: 327px;
   height: 48px;
   padding: 0px 20px;
@@ -10,7 +10,7 @@
   color: #5B5E7E;
 }
 
-.menuBar button {
+.navBar button {
   padding: 0;
   font: 700 12px/12px 'Josefin Bold';
   letter-spacing: -0.17px;
@@ -27,7 +27,7 @@
   justify-content: space-between;
 }
 
-#desktopFilterMenuBar {
+#desktopFilterNavBar {
   display: none;
 }
 
@@ -62,7 +62,7 @@
   }
 }
 
-#mobileFilterMenuBar {
+#mobileFilterNavBar {
   margin-top: 16px;
   padding: 0px 80px;
   border-radius: 5px;
@@ -71,7 +71,7 @@
 /* ###################################### DESKTOP VERSION ###################################### */
 
 @media screen and (min-width: 768px) {
-  .menuBar {
+  .navBar {
     width: 540px;
     height: 50px;
     padding: 0px 24px;
@@ -80,17 +80,17 @@
     letter-spacing: -0.19px;
   }
 
-  .menuBar button {
+  .navBar button {
     font: 400 14px/14px 'Josefin Regular';
     letter-spacing: -0.19px;
   }
 
-  #desktopFilterMenuBar {
+  #desktopFilterNavBar {
     display: block;
     margin: 0px 55px 0px 96px;
   }
 
-  #mobileFilterMenuBar {
+  #mobileFilterNavBar {
     display: none;
   }
 }

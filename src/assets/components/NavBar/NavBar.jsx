@@ -1,17 +1,17 @@
 import { useEffect, useRef } from 'react'
-import './menuBar.css'
+import './navBar.css'
 
-const MainMenuBar = ({ mode, uncompletedTodos, clearCompleted, setFilter }) => {
+const MainNavBar = ({ mode, uncompletedTodos, clearCompleted, setFilter }) => {
   return (
-    <div id="mainMenuBar" className='menuBar' style={{ backgroundColor: mode === 'dark' ? '#25273D' : 'white' }}>
+    <nav id="mainNavBar" className='navBar' style={{ backgroundColor: mode === 'dark' ? '#25273D' : 'white' }}>
       <p id="info">{uncompletedTodos} items left</p>
-      <div id="desktopFilterMenuBar"><FilterMenu setFilter={setFilter} mode={mode} /></div>
-      <button id="clear-bt" className={mode === "light" ? 'bt-light-mode' : 'bt-dark-mode'} onClick={clearCompleted}>Clear Completed</button>
-    </div>
+      <div id="desktopFilterNavBar"><FilterMenu setFilter={setFilter} mode={mode} /></div>
+      <button id="clear-bt"  aria-label='Clear Completed' className={mode === "light" ? 'bt-light-mode' : 'bt-dark-mode'} onClick={clearCompleted}>Clear Completed</button>
+    </nav>
   )
 }
 
-const MobileFilterMenuBar = ({ setFilter, mode }) => {
+const MobileFilterNavBar = ({ setFilter, mode }) => {
   const darkModeStyle = {
     backgroundColor: '#25273D',
     boxShadow: 'none',
@@ -23,9 +23,9 @@ const MobileFilterMenuBar = ({ setFilter, mode }) => {
   }
 
   return (
-    <menu id="mobileFilterMenuBar" className='menuBar' style={mode === 'dark' ? darkModeStyle : lightModeStyle}>
+    <nav id="mobileFilterNavBar" className='navBar' style={mode === 'dark' ? darkModeStyle : lightModeStyle}>
       <FilterMenu setFilter={setFilter} mode={mode} />
-    </menu>
+    </nav>
   )
 }
 
@@ -50,12 +50,12 @@ const FilterMenu = ({ setFilter, mode }) => {
 
   return (
     <div ref={refFilterMenu} className='filterMenu'>
-      <button className='filter-active' onClick={(e) => handleClick("all", e)}>All</button>
-      <button className='bt-light-mode' onClick={(e) => handleClick("active", e)}>Active</button>
-      <button className='bt-light-mode' onClick={(e) => handleClick("completed", e)}>Completed</button>
+      <button className='filter-active' aria-label='all' onClick={(e) => handleClick("all", e)}>All</button>
+      <button className='bt-light-mode' aria-label='active' onClick={(e) => handleClick("active", e)}>Active</button>
+      <button className='bt-light-mode' aria-label='completed' onClick={(e) => handleClick("completed", e)}>Completed</button>
     </div>
   )
 
 }
 
-export { MainMenuBar, MobileFilterMenuBar };
+export { MainNavBar, MobileFilterNavBar };
