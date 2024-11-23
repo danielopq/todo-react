@@ -15,12 +15,13 @@
     margin-right: 12px;
     border: solid 1px #494C6B;
     background-color: transparent;
-    outline: none;
 }
 
 input[type="text"] {
     width: 230px;
+    height: 12px;
     font: 400 12px/0px 'Josefin Regular';
+    letter-spacing: -0.17px;
     color: #494C6B;
     border: none;
     outline: none;
@@ -29,4 +30,26 @@ input[type="text"] {
 
 ::placeholder {
     color: #9495A5;
+}
+
+@media screen and (min-width: 768px) {
+    #createTodo {
+        width: 540px;
+        height: 64px;
+        padding: 0px 24px;
+    }
+    
+    #createTodo>div {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        margin-right: 24px;
+    }
+    
+    input[type="text"] {
+        width: 230px;
+        height: 18px;
+        font: 400 18px/18px 'Josefin Regular';
+        letter-spacing: -0.25px;
+    }
 }
