@@ -1,8 +1,7 @@
 #title {
     width: 325px;
     height: 20px;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
     margin: 48px auto 0px;
@@ -11,8 +10,8 @@
 
 h1 {
     margin: 0px;
-    padding: 0%;
-    font: 700 25px/0px 'Josefin Bold';
+    padding: 0px;
+    font: 700 25px/20px 'Josefin Bold';
     letter-spacing: 10px;
 }
 
@@ -20,6 +19,13 @@ h1 {
     width: 20px;
     height: 20px;
     border: none;
+    transition: opacity 0.3s ease;
+}
+
+@media(hover:hover){
+    #changeBg-bt:hover {
+        opacity: 0.5;
+    }
 }
 
 .moonBg {
@@ -28,4 +34,30 @@ h1 {
 
 .sunBg {
     background: transparent url('./img/icon-sun.svg') center/20px no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+    #title {
+        width: 541px;
+        height: 48px;
+        margin: 70px auto 0px;
+    }
+
+    h1 {
+        font: 700 40px/48px 'Josefin Bold';
+        letter-spacing: 15px;
+    }
+
+    #changeBg-bt {
+        width: 26px;
+        height: 26px;
+    }
+
+    .moonBg {
+        background-size: 26px;
+    }
+
+    .sunBg {
+        background-size: 26px;
+    }
 }
