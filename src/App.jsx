@@ -19,7 +19,7 @@ const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || defaultTo
 
 function App() {
 
-  const [mode, setMode] = useState('light')
+  const [mode, setMode] = useState('dark')
   const [todos, setTodos] = useState(initialStateTodos);
 
   useEffect(() => {

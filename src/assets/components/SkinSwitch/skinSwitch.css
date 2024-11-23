@@ -46,8 +46,9 @@ h1 {
     }
 
     h1 {
-        font: 700 40px/48px 'Josefin Bold';
+        font: 700 40px/40px 'Josefin Bold';
         letter-spacing: 15px;
+        padding-top: 7px;
     }
 
     #changeBg-bt {

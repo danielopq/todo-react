@@ -100,7 +100,7 @@
 @media screen and (min-width: 768px) {
   .todo {
     width: 540px;
-    height: 63px;
+    height: 65px;
     padding: 0px 24px;
   }
 
@@ -114,7 +114,6 @@
   .todo p {
     width: 410px;
     font: 400 18px/18px 'Josefin Regular';
-    letter-spacing: -0.25px;
     margin-right: 16px;
   }
 
@@ -122,5 +121,9 @@
     width: 18px;
     height: 18px;
     background-size: 18px;
+  }
+
+  .finished-bt {
+    background: url("./img/icon-check.svg") center/11px no-repeat, linear-gradient(-45deg, #C058F3, #55DDFF);
   }
 }
