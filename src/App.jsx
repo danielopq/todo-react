@@ -6,18 +6,19 @@ import TodoList from './assets/components/TodoList/TodoList';
 import { MainMenuBar, MobileFilterMenuBar } from './assets/components/MenuBar/MenuBar';
 import Footer from './assets/components/Footer/Footer';
 
-// const initialStateTodos = [
-//   { id: 1, title: "Complete online JavaScript course", completed: true },
-//   { id: 2, title: "Jog around the park 3x", completed: false },
-//   { id: 3, title: "10 minutes meditation", completed: false },
-//   { id: 4, title: "Read for 1 hour", completed: false },
-//   { id: 5, title: "Pick up groceries", completed: false },
-//   { id: 6, title: "Complete Todo App on Frontend Mentor", completed: false }
-// ];
+const defaultTodos = [
+  { id: 1, title: "Complete online JavaScript course", completed: true },
+  { id: 2, title: "Jog around the park 3x", completed: false },
+  { id: 3, title: "10 minutes meditation", completed: false },
+  { id: 4, title: "Read for 1 hour", completed: false },
+  { id: 5, title: "Pick up groceries", completed: false },
+  { id: 6, title: "Complete Todo App on Frontend Mentor", completed: false }
+];
 
-const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || [];
+const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || defaultTodos;
 
 function App() {
+
   const [mode, setMode] = useState('light')
   const [todos, setTodos] = useState(initialStateTodos);
 

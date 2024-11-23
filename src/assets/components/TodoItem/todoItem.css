@@ -15,7 +15,7 @@
   border-bottom: solid 1px #494C6B;
 }
 
-.todo button:not(.delete-bt){
+.todo button:not(.delete-bt) {
   width: 20px;
   height: 20px;
   border-radius: 10px;
@@ -25,7 +25,8 @@
 
 .todo p {
   width: 230px;
-  font: 400 12px/0px 'Josefin Regular';
+  font: 400 12px/12px 'Josefin Regular';
+  letter-spacing: -0.17px;
   margin-right: 13px;
 }
 
@@ -34,6 +35,8 @@
   height: 12px;
   background: url("./img/icon-cross.svg") center/12px no-repeat;
   border: none;
+  justify-self: flex-end;
+  transition: opacity 0.3s ease;
 }
 
 .unCompletedTask-light {
@@ -70,17 +73,54 @@
   background-color: transparent;
 }
 
-.unFinished-bt-light:hover {
-  border: solid 1px transparent;
-  background: linear-gradient(var(--light-mode-color), var(--light-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
-}
+@media(hover:hover) {
 
-.unFinished-bt-dark:hover {
-  border: solid 1px transparent;
-  background: linear-gradient(var(--dark-mode-color), var(--dark-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
+  .delete-bt:hover {
+    opacity: 0.5;
+  }
+
+  .unFinished-bt-light:hover {
+    border: solid 1px transparent;
+    background: linear-gradient(var(--light-mode-color), var(--light-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
+  }
+
+  .unFinished-bt-dark:hover {
+    border: solid 1px transparent;
+    background: linear-gradient(var(--dark-mode-color), var(--dark-mode-color)) padding-box, linear-gradient(-45deg, #C058F3, #55DDFF) border-box;
+  }
 }
 
 .finished-bt {
   border: none;
   background: url("./img/icon-check.svg") center/8px no-repeat, linear-gradient(-45deg, #C058F3, #55DDFF);
+}
+
+/* ###################################### DESKTOP VERSION ###################################### */
+
+@media screen and (min-width: 768px) {
+  .todo {
+    width: 540px;
+    height: 63px;
+    padding: 0px 24px;
+  }
+
+  .todo button:not(.delete-bt) {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    margin-right: 24px;
+  }
+
+  .todo p {
+    width: 410px;
+    font: 400 18px/18px 'Josefin Regular';
+    letter-spacing: -0.25px;
+    margin-right: 16px;
+  }
+
+  .delete-bt {
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+  }
 }
