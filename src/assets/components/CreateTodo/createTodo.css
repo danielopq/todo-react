@@ -32,6 +32,8 @@ input[type="text"] {
     color: #9495A5;
 }
 
+/* ###################################### DESKTOP VERSION ###################################### */
+
 @media screen and (min-width: 768px) {
     #createTodo {
         width: 540px;
