@@ -16,17 +16,29 @@ const defaultTodos = [
   { id: uuidv4(), title: "Complete Todo App on Frontend Mentor", completed: false }
 ];
 
+// Initialize todos from local storage or use default todos
 const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || defaultTodos;
 
+/**
+ * Main application component.
+ * Manages the state and behavior of the todo app.
+ * @returns {JSX.Element} The App component.
+ */
 function App() {
+  const [mode, setMode] = useState('dark'); // Current theme (dark or light mode)
+  const [todos, setTodos] = useState(initialStateTodos); // State for todos
+  const uncompletedTodos = todos.filter((todo) => !todo.completed).length; // Count of uncompleted todos
+  const [filter, setFilter] = useState("all"); // Current filter for todos (all, active, completed)
 
-  const [mode, setMode] = useState('dark')
-  const [todos, setTodos] = useState(initialStateTodos);
-
+  // Persist todos to local storage whenever they change
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
+  /**
+   * Creates a new todo with the given title.
+   * @param {string} title - The title of the new todo.
+   */
   const createTodo = (title) => {
     const newTodo = {
       id: uuidv4(),
@@ -36,22 +48,35 @@ function App() {
     setTodos([...todos, newTodo]);
   };
 
+  /**
+   * Removes a todo from the list by its ID.
+   * @param {string} id - The ID of the todo to remove.
+   */
   const removeTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id))
-  }
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
+  /**
+   * Toggles the completion status of a todo.
+   * @param {string} id - The ID of the todo to update.
+   */
   const updateTodo = (id) => {
-    setTodos(todos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
-  }
+    setTodos(todos.map(todo => 
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    ));
+  };
 
+  /**
+   * Clears all completed todos from the list.
+   */
   const clearCompleted = () => {
     setTodos(todos.filter((todo) => !todo.completed));
-  }
+  };
 
-  const uncompletedTodos = todos.filter((todo) => !todo.completed).length
-
-  const [filter, setFilter] = useState("all");
-
+  /**
+   * Filters todos based on the current filter setting.
+   * @returns {Array} The filtered list of todos.
+   */
   const filterTodos = () => {
     switch (filter) {
       case "all":
@@ -63,8 +88,13 @@ function App() {
       default:
         return todos;
     }
-  }
+  };
 
+  /**
+   * Switches the theme between dark and light mode.
+   * Also updates the appearance of the website.
+   * @param {Event} e - The button click event.
+   */
   const switchSkin = (e) => {
     if (e.target.className === "moonBg") {
       setMode('dark');
@@ -75,7 +105,7 @@ function App() {
       e.target.className = "moonBg";
       document.getElementsByTagName("body")[0].style.backgroundColor = "#FAFAFA";
     }
-  }
+  };
 
   return (
     <>
@@ -86,15 +116,27 @@ function App() {
       <main>
         <div id="main-cont">
           <div id="todoViewer" className={mode === 'dark' ? 'viewerDarkMode' : 'viewerLightMode'}>
-            <TodoList todos={filterTodos()} setTodos={setTodos}  removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
-            <MainNavBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} setFilter={setFilter} />
+            <TodoList 
+              todos={filterTodos()} 
+              setTodos={setTodos} 
+              removeTodo={removeTodo} 
+              updateTodo={updateTodo} 
+              mode={mode} 
+            />
+            <MainNavBar 
+              mode={mode} 
+              uncompletedTodos={uncompletedTodos} 
+              clearCompleted={clearCompleted} 
+              setFilter={setFilter} 
+            />
           </div>
           <MobileFilterNavBar mode={mode} setFilter={setFilter} />
         </div>
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
 export default App;
+
