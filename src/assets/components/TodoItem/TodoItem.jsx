@@ -21,7 +21,7 @@ const TodoItem = ({ todo, removeTodo, updateTodo, mode }) => {
     },[mode,completed])
 
     return (
-        <div id={id} ref={refTodo} style={{ backgroundColor: mode === 'dark' ? '#25273D' : 'white' }}>
+        <div id={id} ref={refTodo} style={{ backgroundColor: mode === 'dark' ? '#25273D' : 'white' }} draggable="true">
             <button ref={refStateButton} aria-label='Update todo' onClick={() => updateTodo(id)}></button>
             <p ref={refTodoTitle}>{title}</p>
             <button aria-label='Delete todo' className='delete-bt' onClick={() => removeTodo(id)}></button>

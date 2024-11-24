@@ -7,6 +7,15 @@
   padding: 0px 20px;
 }
 
+.todo.dragging {
+  opacity: 0.5;
+  background-color: #cce7ff;
+}
+
+.todo.over {
+  border: 2px dashed #007BFF;
+}
+
 .task-light {
   border-bottom: solid 1px #E3E4F1;
 }

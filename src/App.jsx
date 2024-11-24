@@ -1,5 +1,6 @@
-import './App.css'
+import './App.css';
 import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from "uuid";
 import SkinSwitch from './assets/components/SkinSwitch/SkinSwitch';
 import CreateTodo from './assets/components/CreateTodo/CreateTodo';
 import TodoList from './assets/components/TodoList/TodoList';
@@ -7,12 +8,12 @@ import { MainNavBar, MobileFilterNavBar } from './assets/components/NavBar/NavBa
 import Footer from './assets/components/Footer/Footer';
 
 const defaultTodos = [
-  { id: 1, title: "Complete online JavaScript course", completed: true },
-  { id: 2, title: "Jog around the park 3x", completed: false },
-  { id: 3, title: "10 minutes meditation", completed: false },
-  { id: 4, title: "Read for 1 hour", completed: false },
-  { id: 5, title: "Pick up groceries", completed: false },
-  { id: 6, title: "Complete Todo App on Frontend Mentor", completed: false }
+  { id: uuidv4(), title: "Complete online JavaScript course", completed: true },
+  { id: uuidv4(), title: "Jog around the park 3x", completed: false },
+  { id: uuidv4(), title: "10 minutes meditation", completed: false },
+  { id: uuidv4(), title: "Read for 1 hour", completed: false },
+  { id: uuidv4(), title: "Pick up groceries", completed: false },
+  { id: uuidv4(), title: "Complete Todo App on Frontend Mentor", completed: false }
 ];
 
 const initialStateTodos = JSON.parse(localStorage.getItem("todos")) || defaultTodos;
@@ -28,10 +29,12 @@ function App() {
 
   const createTodo = (title) => {
     const newTodo = {
-      id: new Date(), title: title.trim(), completed: false
-    }
-    setTodos([...todos, newTodo])
-  }
+      id: uuidv4(),
+      title: title.trim(),
+      completed: false,
+    };
+    setTodos([...todos, newTodo]);
+  };
 
   const removeTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id))
@@ -83,7 +86,7 @@ function App() {
       <main>
         <div id="main-cont">
           <div id="todoViewer" className={mode === 'dark' ? 'viewerDarkMode' : 'viewerLightMode'}>
-            <TodoList todos={filterTodos()} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
+            <TodoList todos={filterTodos()} setTodos={setTodos}  removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
             <MainNavBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} setFilter={setFilter} />
           </div>
           <MobileFilterNavBar mode={mode} setFilter={setFilter} />
