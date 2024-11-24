@@ -66,13 +66,11 @@
   color: #4D5067;
 }
 
-.unCompletedTask-light:hover,
-.unCompletedTask-dark:hover {
+.title:hover{
   cursor: grab;
 }
 
-.unCompletedTask-light:active,
-.unCompletedTask-dark:active {
+.title:active {
   cursor: grabbing;
 }
 
