@@ -116,19 +116,8 @@ function App() {
       <main>
         <div id="main-cont">
           <div id="todoViewer" className={mode === 'dark' ? 'viewerDarkMode' : 'viewerLightMode'}>
-            <TodoList 
-              todos={filterTodos()} 
-              setTodos={setTodos} 
-              removeTodo={removeTodo} 
-              updateTodo={updateTodo} 
-              mode={mode} 
-            />
-            <MainNavBar 
-              mode={mode} 
-              uncompletedTodos={uncompletedTodos} 
-              clearCompleted={clearCompleted} 
-              setFilter={setFilter} 
-            />
+            <TodoList todos={filterTodos()} setTodos={setTodos} removeTodo={removeTodo} updateTodo={updateTodo} mode={mode} />
+            <MainNavBar mode={mode} uncompletedTodos={uncompletedTodos} clearCompleted={clearCompleted} setFilter={setFilter} />
           </div>
           <MobileFilterNavBar mode={mode} setFilter={setFilter} />
         </div>
