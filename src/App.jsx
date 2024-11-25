@@ -13,7 +13,7 @@ const defaultTodos = [
   { id: uuidv4(), title: "10 minutes meditation", completed: false },
   { id: uuidv4(), title: "Read for 1 hour", completed: false },
   { id: uuidv4(), title: "Pick up groceries", completed: false },
-  { id: uuidv4(), title: "Complete Todo App on Frontend Mentor", completed: false }
+  { id: uuidv4(), title: "Study React", completed: false }
 ];
 
 // Initialize todos from local storage or use default todos
