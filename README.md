@@ -24,11 +24,11 @@ This project serves as a practical tool for staying organized but also as a show
 
 ### Screenshot
 
-- [Dark theme desktop version](https://github.com/danielopq/todo-react/blob/main/desktopDark.jpg)
-- [Light theme desktop version](https://github.com/danielopq/todo-react/blob/main/desktopLight.jpg)
+- [Dark theme desktop version](https://github.com/danielopq/todo-react/blob/main/screenshots/desktopDark.jpg)
+- [Light theme desktop version](https://github.com/danielopq/todo-react/blob/main/screenshots/desktopLight.jpg)
 
-- [Dark theme mobile version](https://github.com/danielopq/todo-react/blob/main/mobileDark.jpg)
-- [Light theme mobile version](https://github.com/danielopq/todo-react/blob/main/mobileLight.jpg)
+- [Dark theme mobile version](https://github.com/danielopq/todo-react/blob/main/screenshots/mobileDark.jpg)
+- [Light theme mobile version](https://github.com/danielopq/todo-react/blob/main/screenshots/mobileLight.jpg)
 
 
 ### Links
